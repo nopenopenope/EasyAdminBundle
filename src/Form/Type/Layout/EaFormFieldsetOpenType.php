@@ -15,8 +15,10 @@ use Symfony\Contracts\Translation\TranslatableInterface;
  *
  * @internal don't use this type in your applications
  */
-class EaFormFieldsetOpenType extends AbstractType
+final class EaFormFieldsetOpenType extends AbstractType
 {
+    public const BLOCK_PREFIX = 'ea_form_fieldset_open';
+
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver
@@ -39,6 +41,6 @@ class EaFormFieldsetOpenType extends AbstractType
 
     public function getBlockPrefix(): string
     {
-        return 'ea_form_fieldset_open';
+        return self::BLOCK_PREFIX;
     }
 }

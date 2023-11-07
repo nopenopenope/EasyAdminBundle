@@ -12,8 +12,10 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  *
  * @internal don't use this type in your applications
  */
-class EaFormTabListType extends AbstractType
+final class EaFormTabListType extends AbstractType
 {
+    public const BLOCK_PREFIX = 'ea_form_tablist';
+
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver
@@ -23,6 +25,6 @@ class EaFormTabListType extends AbstractType
 
     public function getBlockPrefix(): string
     {
-        return 'ea_form_tablist';
+        return self::BLOCK_PREFIX;
     }
 }

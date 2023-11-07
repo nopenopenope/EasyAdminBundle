@@ -11,10 +11,12 @@ use Symfony\Component\Form\AbstractType;
  *
  * @internal don't use this type in your applications
  */
-class EaFormFieldsetCloseType extends AbstractType
+final class EaFormFieldsetCloseType extends AbstractType
 {
+    public const BLOCK_PREFIX = 'ea_form_fieldset_close';
+
     public function getBlockPrefix(): string
     {
-        return 'ea_form_fieldset_close';
+        return self::BLOCK_PREFIX;
     }
 }

@@ -13,8 +13,10 @@ use Symfony\Component\Form\AbstractType;
  */
 class EaFormTabPaneCloseType extends AbstractType
 {
+    public const BLOCK_PREFIX = 'ea_form_tabpane_close';
+
     public function getBlockPrefix(): string
     {
-        return 'ea_form_tabpane_close';
+        return self::BLOCK_PREFIX;
     }
 }

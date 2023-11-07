@@ -14,8 +14,10 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  *
  * @internal don't use this type in your applications
  */
-class EaFormColumnGroupCloseType extends AbstractType
+final class EaFormColumnGroupCloseType extends AbstractType
 {
+    public const BLOCK_PREFIX = 'ea_form_column_group_close';
+
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver
@@ -30,6 +32,6 @@ class EaFormColumnGroupCloseType extends AbstractType
 
     public function getBlockPrefix(): string
     {
-        return 'ea_form_column_group_close';
+        return self::BLOCK_PREFIX;
     }
 }

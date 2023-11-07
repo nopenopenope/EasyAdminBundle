@@ -17,6 +17,8 @@ use Symfony\Contracts\Translation\TranslatableInterface;
  */
 class EaFormTabPaneOpenType extends AbstractType
 {
+    public const BLOCK_PREFIX = 'ea_form_tabpane_open';
+
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver
@@ -35,6 +37,6 @@ class EaFormTabPaneOpenType extends AbstractType
 
     public function getBlockPrefix(): string
     {
-        return 'ea_form_tabpane_open';
+        return self::BLOCK_PREFIX;
     }
 }
